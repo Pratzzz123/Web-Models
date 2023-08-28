@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Work+Sans:wght@700&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/883125c4ba.js" crossorigin="anonymous"></script>
+    <script src="/script.js"></script>
+    <title>Clock</title>
+</head>
+
+<body onload="load()">
+<div id="loader">
+     <div class="load"></div>
+
+    </div>
+    <div id="container">
+        <div id="clock">
+            <ul>
+                <li class="numbers"><span>1</span></li>
+                <li class="numbers"><span>2</span></li>
+                <li class="numbers"><span>3</span></li>
+                <li class="numbers"><span>4</span></li>
+                <li class="numbers"><span>5</span></li>
+                <li class="numbers"><span>6</span></li>
+                <li class="numbers">
+                    <div class="block"></div>
+                </li>
+                <li class="numbers">
+                    <div class="block"></div>
+                </li>
+                <li class="numbers">
+                    <div class="block"></div>
+                </li>
+                <li class="numbers">
+                    <div class="block"></div>
+                </li>
+                <li class="numbers">
+                    <div class="block"></div>
+                </li>
+                <li class="numbers">
+                    <div class="block"></div>
+                </li>
+            </ul>
+
+        </div>
+        <div class="hands">
+            <div class="hour">
+                <div class="h" id="h"></div>
+            </div>
+            <div class="min">
+                <div class="m" id="m"></div>
+            </div>
+            <div class="sec">
+                <div class="s" id="s"></div>
+            </div>
+        </div>
+        <div id="time">
+            <div>
+                <span id="hour">00</span>
+                <span>Hours</span>
+            </div>
+            <div>
+                <span id="minute">00</span>
+                <span>Minutes</span>
+            </div>
+            <div>
+                <span id="second">00</span>
+                <span>Seconds</span>
+            </div>
+            </div>
+        <div id="mode1">
+
+            <input type="checkbox" class="check" id="check"><label for="check" class="label">
+                <i class="fa fa-sun-o"></i>
+                <i class="fa fa-moon-o"></i>
+                <div class="scroll"></div>
+            </label>
+          
+        </div>
+        <div id="mode2">
+            <input type="checkbox" class="check" id="check2"><label for="check2" class="label">
+
+                <i class="fa fa-clock-o"></i>
+                <i class="fa fa-power-off"></i>
+                <div class="scroll"></div>
+            </label>
+        </div>
+    </div>
+    <script>
+    var loader = document.getElementById('loader');
+            function load(){
+                loader.style.display = 'none';
+            }
+
+        const c = document.getElementById("check");
+        c.addEventListener('click', function () {
+            document.getElementsByTagName('body')[0].classList.toggle("dark");
+        })
+        const c2 = document.getElementById("check2");
+        c2.addEventListener('click', function () {
+            document.getElementsByTagName('body')[0].classList.toggle("digital");
+        })
+        setInterval(() => {
+    date = new Date();
+    hrs = date.getHours();
+    min = date.getMinutes();
+    sec = date.getSeconds();
+    hrotate = 30*hrs + min/2 + sec/120;
+    mrotate = 6*min + sec/10;
+    srotate = 6*sec;
+    h.style.transform = `rotate(${hrotate}deg)`;
+    m.style.transform = `rotate(${mrotate}deg)`;
+    s.style.transform = `rotate(${srotate}deg)`;
+
+    var hours = document.getElementById('hour');
+    var minutes = document.getElementById('minute');
+    var seconds = document.getElementById('second');
+    hours.innerHTML = hrs;
+    minutes.innerHTML = min;
+    seconds.innerHTML = sec;
+
+}, 1000);
+
+    </script>
+</body>
+
+</html>
