@@ -1,0 +1,359 @@
+:root{
+    --lgreen: rgb(170, 205, 100);
+    --realyellow: #f7cb49;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+}
+body{
+    box-sizing: border-box;
+    background: rgba(0, 0, 0, 0.877);
+
+    
+}
+#container{
+    background: rgba(27, 27, 27, 0.877);
+    height: 100vh;
+    width: 100vw;
+    color: white;
+    font-family: 'Montserrat', sans-serif;
+    position: absolute;
+    z-index: -2;
+    /* background-blend-mode: darken; */
+}
+
+#container::after{
+    content: "";
+    height: 100%;
+    width: 100%;
+    background: url("https://images.unsplash.com/photo-1564865878688-9a244444042a?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8M3x8Y29kZXxlbnwwfHwwfHx8MA%3D%3D&auto=format&fit=crop&w=1000&q=60") no-repeat center center/cover;
+    position: absolute;
+    z-index: -1;
+    opacity: 0.1;
+    top: 0;
+    position: fixed;
+}
+.icon{
+    display: flex;
+    flex-direction: column;
+    height: 40vh;
+    width: 40vh;
+}
+.quote{
+    font-family: 'borel', cursive;
+    position: absolute;
+    top: 50vh;
+    font-size: 4vh;
+    width: 30vh;
+    /* text-align: center; */
+    left: 0%;
+    /* align-self: center; */
+    /* justify-self: center; */
+    opacity: 0;
+    transition: all 0.45s ease-in;
+    font-weight: 500;
+    font-family: monospace;
+    margin-left: 2vh;
+}
+.quote a{
+   text-decoration: none;
+
+}
+.quote i{
+    color: rgb(31, 31, 32);
+
+}
+.quote span{
+   font-size: 2.4vh;
+   margin: 5px;
+   padding: 5px;
+   color: rgb(65, 65, 70);
+   font-weight: 600;
+}
+
+.quote dt{
+    margin-top: 2vh;
+}
+
+.quote :nth-child(4) img{
+    height: 12%;
+    width: 12%;
+    border-radius: 25%;
+}
+.pfp{
+    height: 30vh;
+    border-radius: 50%;
+    position: absolute;
+    top: 15vh;
+    opacity: 0.9;
+    transition: all 0.3s;
+}
+
+.green_box{
+    background-color: var(--lgreen);
+    height: 30vh;
+    width: 30vh;
+    position: absolute;
+    transition: all 0.3s ease-in;
+}
+.green_box::after{
+    content: "";
+    background-color: var(--lgreen);
+    height: 30vh;
+    width: 30vh;
+    position: absolute;
+    top: 15vh;
+    border-radius: 50%;
+    transition: all 0.3s ease-in;
+}
+
+.icon:hover .green_box{
+    height: 80vh;
+}
+.icon:hover .quote{
+    opacity: 1;
+}
+
+.icon:hover .green_box::after{
+    top: 65.5vh;
+}
+
+.icon:hover .pfp{
+    border-radius: 0;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.63);
+}
+
+.first_name{
+    position: absolute;
+    color: #f7cb49;
+    font-weight: bolder;
+    font-size: 6.5vh;
+    left: 4.7em;
+    margin: 3px;
+    top: 10%;
+    text-shadow: 2px 2px rgba(104, 206, 234, 0.468);
+}
+.first_name::after{
+    content: "Patil";
+    color: var(--lgreen);
+    position: absolute;
+    left: 0;
+    top: 100%;
+}
+
+.first_name::before{
+    content: "Software Developer";
+    font-size: 3vh;
+    color: wheat;
+    text-shadow: none;
+    font-weight: 200;
+    position: absolute;
+    top: 200%;
+}
+
+.skills{
+    position: absolute;
+    height: 50vh;
+    width: 130vh;
+    left: -25em;
+}
+
+
+.skills{
+    position: absolute;
+    left: 14em;
+    top: 35%;
+    width: 40%;
+    height: 29%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    font-size: 2vh;
+    justify-content: space-between;
+    margin: 2em;
+}
+.skills dt i{
+    font-size: 3vh;
+    color: var(--realyellow);
+}
+.title{
+    font-size: 2.5vh;
+    width: 100%;
+    color: var(--lgreen);
+}
+.progress{
+    background: white;
+    display: blocks;
+    height: 1vh;
+    width: 100%;
+    box-shadow: inset 1px 1px 7px 0px black;
+    border-radius: 5px;
+    overflow: hidden;
+}
+.progress span{
+    height: 1vh;
+    float: left;
+    background: var(--realyellow);
+    box-shadow: 2px 1px 7px 0px yellow;
+    border-radius: 5px;
+}
+.html{
+    width: 100%;
+    animation: html 2s;
+}
+.html::after{
+    content: '100%';
+    position: absolute;
+    right: 0;
+    top: 20%;
+}
+.css{
+    width: 57%;
+    animation: css 2s;
+}
+
+.css::after{
+    content: '57%';
+    position: absolute;
+    right: 0;
+    bottom: 50%;
+}
+.cpp{
+    width: 58%;
+    animation: cpp 2s;
+}
+
+.cpp::after{
+    content: '58%';
+    position: absolute;
+    right: 0;
+    bottom: 29%;
+}
+.pyth{
+    width: 70%;
+    animation: pyth 2s;
+}
+.pyth::after{
+    content: '70%';
+    position: absolute;
+    right: 0;
+    bottom: 6%;
+}
+@keyframes html{
+    0%{
+        width: 0;
+    }
+    100%{
+        width: 100%;
+    }
+}
+
+@keyframes css{
+    0%{
+        width: 0;
+    }
+    100%{
+        width: 57%;
+    }
+}
+
+@keyframes cpp{
+    0%{
+        width: 0;
+    }
+    100%{
+        width: 58%;
+    }
+}
+
+@keyframes pyth{
+    0%{
+        width: 0;
+    }
+    100%{
+        width: 70%;
+    }
+}
+
+#projects{
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    top: 100%;
+}
+
+.pr-title{
+    position: absolute;
+    margin: auto;
+    text-align: center;
+    width: 100%;
+    font-size: 5vh;
+    font-weight: 900;
+    border-bottom: 1px solid gray;
+    padding: 2vh;
+    color: var(--realyellow);
+    text-shadow: 12px 8px 6px black;
+}
+
+.pr-items{
+    display: flex;
+    width: 100%;
+    height: 100%;
+    align-items: center;
+    justify-content:space-around;
+    position: absolute;
+    top: 13%;
+}
+.pr-items div{
+    height: 50vh;
+    width: 50vh;
+    padding: 2vh;
+    margin: 2vh;
+    /* overflow: hidden; */
+}
+
+.pr-items div dt{
+    padding: 2vh;
+    text-align: center;
+    color: bisque;
+    font-size: large;
+    text-shadow: 3px 3px 10px black;
+    font-weight: 400;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+
+}
+
+.pr-items div dd{
+    position: absolute;
+    height: inherit;
+    width: 50vh;
+}
+
+
+.pr-items ul{
+    list-style: none;
+}
+.pr-items ul li{
+    padding: 2vh;
+
+}
+.pr-items ul li a{
+    text-decoration: none;
+    color: var(--lgreen);
+    text-shadow: 2px 2px 6px black;
+}
+
+@media only screen and (max-width: 1100px){
+    .pr-items{
+        flex-direction: column;
+    }
+}
+
+.pr-items div:nth-child(1){
+    background-color: #49f7b249;
+}
+.pr-items div:nth-child(2){
+    background-color: #f7cc4996;
+}
