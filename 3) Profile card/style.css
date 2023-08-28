@@ -1,0 +1,290 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+#loader{
+    width: 100%;
+    height: 100vh;
+    padding: 40%;
+    background: #1f1f1f;
+    z-index: 1000;
+   display: flex;
+   justify-content: space-around;
+   align-items: center;
+}
+.circ{
+    width: 2vh;
+    height: 17vh;
+    background: #db133c;
+    border-radius: 5px;
+}
+#loader div:nth-child(1){
+animation: load1 0.7s ease-in 0s infinite;
+}
+@keyframes load1{
+    0%{
+        height: 5vh;
+    }
+    50%{
+        height: 17vh;
+    }
+    100%{
+        height: 5vh;
+    }
+}
+
+#loader div:nth-child(2){
+    animation: load2 0.7s ease-in 0s infinite;
+    }
+    
+@keyframes load2{
+    0%{
+        height: 18vh;
+    }
+    50%{
+        height: 5vh;
+    }
+    100%{
+        height: 18vh;
+    }
+}
+
+
+#loader div:nth-child(3){
+    animation: load3 0.7s ease-in 0s infinite;
+    }
+    
+@keyframes load3{
+    0%{
+        height: 5vh;
+    }
+    50%{
+        height: 17vh;
+    }
+    100%{
+        height: 5vh;
+    }
+}
+body{
+    height: 100vh;
+    background: #1f1f1f;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-sizing: border-box;
+}
+#container{
+    color: white;
+    background: #151515;
+    height: 80vh;
+    width: 45vh;
+    border-radius: 4px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-family: 'Nunito', sans-serif;
+    box-shadow: rgb(202, 16, 16) 1px 1px 0px 1px, rgb(41, 39, 39) -1px -1px 17px, rgb(19, 18, 18) 8px 8px 23px 1px;
+    position: absolute;
+}
+
+.pickr-container{
+    z-index: 100;
+    position: absolute;
+    top: 0;
+    left: 0;
+    transform: scale(0.7);
+}
+.pcr-swatches{
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    transform: scale(0.7);
+    position: absolute;
+    background-color: white;
+    top: -35%;
+}
+
+ 
+.pcr-app{
+    height: 60vh;
+    position: absolute;
+}
+.pcr-interaction{
+    position: absolute;
+    display: none;
+}
+.pcr-interaction input{
+    display: none;
+    height: 10vh;
+    width: 10vh;
+}
+.pcr-selection{
+    display: none;
+} 
+
+.box{
+    background: #db133c;
+    position: absolute;
+    height: 14vh;
+    width: 45vh;
+    border-radius: 4px 4px 0 0;
+}
+.img{
+    z-index: 2;
+    position: absolute;
+    top: 5%;
+    /* border: 2px solid rgb(25, 0, 255); */
+    height: 20vh;
+    width: 20vh;
+    border-radius: 50%;
+    
+    /* top: 0vh; */
+    background: url('https://api.sololearn.com/Uploads/Avatars/21638026.jpg') no-repeat center center/cover;
+    box-shadow: -2px 2px 5px 0px #000000;
+}
+#container p{
+
+    height: 17vh;
+    width: 100%;
+    position: relative;
+    margin-bottom: 30%;
+    text-align: center;
+    top: 30%;
+    font-size: 5vh;
+    font-family: 'Baloo Bhaina 2', cursive;
+    font-weight: bold;
+}
+.fa-users{
+    color: white;
+    font-weight: bold;
+    font-size: 3vh;
+    position: absolute;
+    width: 100%;
+    text-align: center;
+    top: 37%;
+    height: 2vh;
+    margin: 3%;
+
+}
+#container a{
+    position: absolute;
+    text-decoration: none;
+    color: white;
+    top: 42%;
+    font-weight: 100;
+    margin: 7%;
+    font-size: 3vh;
+    width: 100%;
+    text-align: center;
+}
+#container ul{
+    margin-top: 23%;
+    top: 43%;
+}
+#container ul, .score{
+
+    list-style: none;
+    width: 90%;
+    display: flex;
+    justify-content: space-around;
+    font-size: 2vh;
+    position: absolute;
+    
+}    
+.score{
+    bottom: 36%;
+}
+
+#container ul li, #container ul li i{
+    text-align: right;    
+    color: #db133c;
+}
+.score li{
+    color: white;
+    text-align: left;
+    
+}
+dl{
+    position: absolute;
+    bottom: 4%;
+    width: 80%;
+    height: 29%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    font-size: 2vh;
+    justify-content: space-between;
+}
+dl dt i{
+    font-size: 3vh;
+    color: red;
+}
+.title{
+    font-size: 2.5vh;
+    width: 100%;
+    color: red;
+}
+.progress{
+    background: white;
+    display: blocks;
+    height: 1vh;
+    width: 100%;
+    box-shadow: inset 1px 1px 7px 0px black;
+    border-radius: 5px;
+    overflow: hidden;
+}
+.progress span{
+    height: 1vh;
+    float: left;
+    background: #db133c;
+    box-shadow: 2px 1px 7px 0px red;
+    border-radius: 5px;
+}
+.html{
+    width: 57%;
+    animation: html 2s;
+}
+.html::after{
+    content: '57%';
+    position: absolute;
+    right: 0;
+    top: 45%;
+}
+.css{
+    width: 0%;
+}
+
+.css::after{
+    content: '0%';
+    position: absolute;
+    right: 0;
+    bottom: 15%;
+}
+.cpp{
+    width: 58%;
+    animation: cpp 2s;
+}
+
+.cpp::after{
+    content: '58%';
+    position: absolute;
+    right: 0;
+    bottom: -13%;
+}
+@keyframes html{
+    0%{
+        width: 0;
+    }
+    100%{
+        width: 57%;
+    }
+}
+
+@keyframes cpp{
+    0%{
+        width: 0;
+    }
+    100%{
+        width: 58%;
+    }
+}
