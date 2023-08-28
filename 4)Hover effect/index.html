@@ -1,0 +1,63 @@
+<!-- Inspired from: https://tympanus.net/TipsTricks/CSS3MenuHoverEffect/index.html -->
+
+<!-- All pictures from pixiv.net
+1)Render one - https://www.pixiv.net/en/artworks/89447782
+
+2) Render two - https://www.pixiv.net/en/artworks/89969398
+
+3)Render three - https://www.pixiv.net/en/artworks/89501931
+
+4)Render four - https://www.pixiv.net/en/artworks/85516969 -->
+
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Merriweather:ital@1&family=Ubuntu:wght@500&display=swap"
+        rel="stylesheet">
+    <title>Hover Effect</title>
+</head>
+
+<body onload="load()">
+    <div id="loader">
+        <div class="load"></div>
+    </div>
+    <div id="container">
+        <ul>
+            <li class="item1">
+                <span>Shijo &nbsp;</span>
+                <span>Dyson &nbsp;&nbsp;</span>
+                <img src="https://www.pixiv.net/en/artworks/89447782" alt="wallpaper1">
+            </li>
+            <li class="item2">
+                <span>vinci_v柒 &nbsp;</span>
+                <span>your name? &nbsp;</span>
+                <img src="https://dl.dropbox.com/s/4llnbd5ofi0xf4j/89969398_p0_master1200.jpg" alt="wallpaper2">
+            </li>
+            <li class="item3">
+                <span>vinci_v柒 &nbsp;</span>
+                <span>Sky Mirror &nbsp;</span>
+                <img src="https://dl.dropbox.com/s/a4jutvmxtdtaqdk/89501931_p0_master1200.jpg" alt="wallpaper3">
+            </li>
+            <li class="item4">
+                <span>vinci_v柒 &nbsp;</span>
+                <span>Jewelry &nbsp;</span>
+                <img src="https://dl.dropbox.com/s/j2ac9f1mee96wgs/85516969_p0_master1200.jpg" alt="wallpaper4">
+            </li>
+        </ul>
+    </div>
+    <script>
+        var loader = document.getElementById('loader');
+
+        function load() {
+            loader.style.display = 'none';
+        }
+    </script>
+</body>
+
+</html>

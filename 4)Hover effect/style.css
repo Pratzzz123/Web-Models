@@ -1,0 +1,142 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+#loader {
+    width: 100%;
+    height: 100vh;
+    background: #000 no-repeat  center center/cover;
+    z-index: 10;
+    position: absolute;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.load{
+    height: 200px;
+    width: 200px;
+    border-radius: 50%;
+    border-top: 7px solid red;
+    border-left: 7px solid red;
+    animation: rotate 1s ease-in-out 0s infinite;
+}
+@keyframes rotate{
+    0%{
+        transform: rotate(0deg);
+    }
+    100%{
+        transform: rotate(360deg);
+    }
+}
+body {
+    height: 100vh;
+    background: #1f1f1f;
+    color: white;
+    display: flex;
+    align-items: center;
+    box-sizing: border-box;
+}
+
+#container {
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    transform: scale(0.8);
+}
+
+#container ul {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    position: absolute;
+    left: 0;
+    /* justify-content: space-around; */
+}
+
+#container ul li {
+    list-style: none;
+    text-align: right;
+    line-height: 6.8vh;
+    padding: 2vh 0vh;
+    padding-left: 2vh;
+    margin-left: 0vh;
+    border-right: 2px solid #444444;
+}
+
+#container ul li span {
+    display: block;
+}
+
+#container ul li span:nth-child(1) {
+    font-size: 2.5vh;
+    font-family: 'Ubuntu', sans-serif;
+    color: grey;
+    text-shadow: 1px 1px 2px rgb(65, 63, 63);
+}
+
+#container ul li span:nth-child(2) {
+    font-family: 'Merriweather', serif;
+    font-size: 4.5vh;
+    transition: all 0.5s;
+}
+
+#container ul li:hover {
+    background: rgb(36, 36, 39);
+    opacity: 0.8;
+}
+
+.item1:hover span:nth-child(2) {
+    color: #4169eb;
+}
+
+.item2:hover span:nth-child(2) {
+    color: #fcb150;
+}
+
+.item3:hover span:nth-child(2) {
+    color: #25acf8;
+}
+
+.item4:hover span:nth-child(2) {
+    color: #31bcd4;
+}
+
+li img {
+    position: absolute;
+    /* display: none; */
+    z-index: -2;
+    left: 0px;
+    top: 15.5%;
+    opacity: 0;
+    transition: all 0.5s ease-in-out;
+    height: 70vh;
+    width: 40vh;
+    pointer-events: none;
+}
+
+li:hover img {
+    /* display: block; */
+    left: 30vh;
+    opacity: 1;
+
+}
+
+.item1:hover {
+    border-bottom: 1px solid #4169eb;
+}
+
+.item2:hover {
+    border-bottom: 1px solid #fcb150;
+}
+
+.item3:hover {
+    border-bottom: 1px solid #25acf8;
+}
+
+.item4:hover {
+    border-bottom: 1px solid #31bcd4;
+}
